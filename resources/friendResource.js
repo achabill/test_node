@@ -15,6 +15,10 @@ module.exports = {
     init: function (_dao) {
         this.dao = _dao;
     },
+    createIndex: function(){
+        var indexMapping = require('../mappings/friendMapping');
+        dao.createIndex(indexName,indexMapping);
+    },
     router: function () {
 
         var r = express.Router();
