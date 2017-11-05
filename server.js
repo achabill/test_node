@@ -20,6 +20,7 @@ dao.init(client);
 //add resources
 var friendResource = require('./resources/friendResource');
 friendResource.init(dao);
+friendResource.createIndex();
 
 app.use('/api', friendResource.router());
 
